@@ -1,0 +1,19 @@
+a i{    
+    float: right;   
+    color: #888;
+    cursor: pointer;
+    vertical-align: top;
+}
+li {
+
+    list-style: none;
+}
+.borderless{
+
+    border:none;
+}
+.logo-img {
+  /*  display: flex;
+    align-items: center;*/
+    vertical-align: middle;
+}

@@ -1,0 +1,63 @@
+
+
+<!--    <div class="card titles" >
+        <h2>Educacion</h2>
+        <div class="btn_edit">
+            <a href="#" class="btn-right"><i class="fa fa-pen"> </i></a>
+        </div>
+    </div>
+    <ul class="items-list">
+        <li *ngFor="let educacion of educacionList">    
+        
+            <div class="data-container">
+                <a href="#"></a>
+                <div class="logo-image-container">
+                    <img
+                    class="logo-image" 
+                    [src]="educacion.imagen"
+                    />
+                </div>
+            </div>
+            <div class="list-info">
+                <div>
+                    <h3>{{educacion.escuela}}</h3>
+                    <p>{{educacion.titulo}}</p>
+                    <p><time>{{educacion.inicio}}</time><time>{{educacion.fin}}</time></p>
+                </div>
+            </div>
+            <div class="data-control">
+                <div class="btn-edit">
+                    <a href="#" class="btn-right"><i class="fa fa-pen"> </i></a>
+                </div>
+
+            </div>
+        </li>
+
+    </ul>
+-->
+<div id="educacion" class="container card titles">
+    <h2>Educacion</h2>
+    <ul class="items-list">
+        <li *ngFor="let educacion of educacionList">    
+            <div class="card mb-3 borderless" >
+                <div class="row g-0">
+                <div class="col-md-1 list-info" >
+                    <img [src]="educacion.imagen"  class="logo-img img-fluid rounded-start" alt="...">            
+                </div>
+                <div class="col-md-11">
+                    <div class="card-body list-info">
+                        <div class="btn-edit ">
+                            <a href="#"><i class="fa fa-trash"></i></a>
+                            <a href="#"><i class="fa fa-pen"> </i></a> 
+                            <h5 class="card-title"> {{educacion.escuela}}</h5>                         
+                        </div>
+                        <p class="card-text">{{educacion.titulo}}</p>
+                        <p class="card-text"><time>{{educacion.inicio}}</time> - <time>{{educacion.fin}}</time></p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div><!--cierra div educacion-->
