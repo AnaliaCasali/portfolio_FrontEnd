@@ -1,19 +1,26 @@
 a i{    
     float: right;   
-    color: #888;
+    color: white;
     cursor: pointer;
     vertical-align: top;
 }
+i{
+    margin: 10px 10px 10px 10px;
+    }
+
 li {
 
     list-style: none;
+
 }
 .borderless{
-
     border:none;
 }
 .logo-img {
-  /*  display: flex;
-    align-items: center;*/
-    vertical-align: middle;
+    margin-top: 2em;
+}
+#educacion, .card
+{
+background-color: #798eb1;
+
 }

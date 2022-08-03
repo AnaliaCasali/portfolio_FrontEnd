@@ -1,0 +1,27 @@
+
+a i{    
+    float: right;   
+    color: white;
+    cursor: pointer;
+    vertical-align: top;
+}
+i{
+    margin: 10px 10px 10px 10px;
+    }
+
+li {
+
+    list-style: none;
+
+}
+.borderless{
+    border:none;
+}
+.logo-img {
+    margin-top: 2em;
+}
+#proyectos, .card
+{
+background-color: #798eb1;
+
+}

@@ -1,41 +1,4 @@
-
-
-<!--    <div class="card titles" >
-        <h2>Educacion</h2>
-        <div class="btn_edit">
-            <a href="#" class="btn-right"><i class="fa fa-pen"> </i></a>
-        </div>
-    </div>
-    <ul class="items-list">
-        <li *ngFor="let educacion of educacionList">    
-        
-            <div class="data-container">
-                <a href="#"></a>
-                <div class="logo-image-container">
-                    <img
-                    class="logo-image" 
-                    [src]="educacion.imagen"
-                    />
-                </div>
-            </div>
-            <div class="list-info">
-                <div>
-                    <h3>{{educacion.escuela}}</h3>
-                    <p>{{educacion.titulo}}</p>
-                    <p><time>{{educacion.inicio}}</time><time>{{educacion.fin}}</time></p>
-                </div>
-            </div>
-            <div class="data-control">
-                <div class="btn-edit">
-                    <a href="#" class="btn-right"><i class="fa fa-pen"> </i></a>
-                </div>
-
-            </div>
-        </li>
-
-    </ul>
--->
-<div id="educacion" class="container card titles">
+<div id="educacion" class="container-fluid borderless">
     <h2>Educacion</h2>
     <ul class="items-list">
         <li *ngFor="let educacion of educacionList">    
@@ -51,9 +14,9 @@
                             <a href="#"><i class="fa fa-pen"> </i></a> 
                             <h5 class="card-title"> {{educacion.escuela}}</h5>                         
                         </div>
-                        <p class="card-text">{{educacion.titulo}}</p>
-                        <p class="card-text"><time>{{educacion.inicio}}</time> - <time>{{educacion.fin}}</time></p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text">{{educacion.titulo}}. 
+                        <time> {{educacion.inicio}}</time> - <time>{{educacion.fin}}</time></p>
+                        <p class="card-text"><small >{{educacion.career}}</small></p>
                     </div>
                 </div>
                 </div>

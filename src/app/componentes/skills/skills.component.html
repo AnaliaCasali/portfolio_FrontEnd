@@ -1,1 +1,68 @@
-<p>skills works!</p>
+<div class="container-fluid">
+
+    <div class="row">
+        <h2>Hard & Soft Skills</h2>
+        <ul class="items-list">
+            <li *ngFor="let hardSkill of hardSkillsList">
+                <div class=" text-center col-xs-6 col-sm-3 col-md-3 col-lg-3 enfila">    
+                <circle-progress
+                    [percent]="hardSkill.porcentaje"
+                    [radius]="80"
+                    [outerStrokeWidth]="8"
+                    [innerStrokeWidth]="2"
+                    [titleFontSize]="'3em'"
+                    [showTitle]="true"
+                    [title]="'hardSkill.nombre'"
+                    [showSubtitle]="false"
+                    [showUnits]="false"
+                    [outerStrokeColor]="'#798eb1'"
+                    [innerStrokeColor]="'#f8b301'"
+                    [animation]="true"
+                    [animationDuration]="600"
+                    [showImage]="true"
+                    [imageHeight]="80"
+                    [imageWidth]="80"
+                    [imageSrc]="hardSkill.imagen"
+                    ></circle-progress>
+                </div>
+            </li>
+        </ul>
+    
+    
+    </div>
+<br class="clearBoth" /><!-- you may or may not need this -->
+    <!--   
+ -->            
+
+ <div class="row">
+    
+    <ul class="items-list">
+        <li *ngFor="let softSkill of softSkillsList">
+            <div class=" text-center col-xs-6 col-sm-3 col-md-3 col-lg-3 enfila">    
+            <circle-progress
+                [percent]="softSkill.porcentaje"
+                [radius]="80"
+                [outerStrokeWidth]="8"
+                [innerStrokeWidth]="2"
+                [titleFontSize]="'3em'"
+                [showTitle]="true"
+                [title]="'softSkill.nombre'"
+                [showSubtitle]="false"
+                [showUnits]="false"
+                [outerStrokeColor]="'#798eb1'"
+                [innerStrokeColor]="'#f8b301'"
+                [animation]="true"
+                [animationDuration]="600"
+                [showImage]="true"
+                [imageHeight]="80"
+                [imageWidth]="80"
+                [imageSrc]="softSkill.imagen"
+                ></circle-progress>
+            </div>
+        </li>
+    </ul>
+
+
+        
+</div>
+</div>

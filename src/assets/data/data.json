@@ -1,4 +1,6 @@
-{   "name": "Analia Casali",
+
+{   
+	"name": "Analia Casali",
 	"Persona": [
 		{
 			"id": "1",
@@ -11,7 +13,9 @@
 			"ocupación": "Programador Full Stack",
 			"image_background_header": "https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-black-shading-red-shard-geometry-banner-background-shadingred-debrisred-glowgeometry-image_80184.jpg",
 			"image_perfil": "https://i2.wp.com/imagenes.milenio.com/E-yJnq9EhkZhWaU7T_2utkyTymQ=/958x596/smart/https://www.milenio.com/uploads/media/2018/10/05/steve-jobs-perdio-vida-consecuencia_0_199_1193_742.jpg?w=640&ssl=1",
-			"id_domicilio":"2"
+			"id_domicilio":"2",
+			"linkedin": "https://ar.linkedin.com/in/analiacasali",
+			"github": "https://github.com/AnaliaCasali/"
 		}
 	]
 ,
@@ -42,6 +46,98 @@
 			"puntaje": 70,
 			"inicio": "2012",
 			"fin": "2014"
+		}
+	]
+	,
+	"experiencia": [
+		{
+			"empresa": "ISP 63",
+			"puesto": "Ingeniería",
+			"imagen": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+			"descripcion": "Sistemas Computacionales Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt atque sunt harum ipsa, asperiores pariatur voluptas repudiandae perspiciatis voluptate iusto totam delectus culpa nihil ut vitae officia ab nulla?",
+			"inicio": "2019",
+			"fin": "2023"
+		},
+		{
+			"empresa": "Prominente",
+			"puesto": "Ingeniería",
+			"imagen": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+			"descripcion": "Sistemas Computacionales Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt atque sunt harum ipsa, asperiores pariatur voluptas repudiandae perspiciatis voluptate iusto totam delectus culpa nihil ut vitae officia ab nulla?",
+			"inicio": "2019",
+			"fin": "2023"
+		},
+		{
+			"empresa": "UCSF",
+			"puesto": "Ingeniería",
+			"imagen": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+			"descripcion": "Sistemas Computacionales Lorem ipsum dolor sit amet, consect Lorem",
+			"inicio": "2019",
+			"fin": "2023"
+		}
+	]
+	,
+	"hardskills": [
+		{
+			"nombre": "HTML 5",
+			"imagen": "../../../assets/img/html5.png",
+			"porcentaje": "100"
+		},
+		{
+			"nombre": "css",
+			"imagen": "../../../assets/img/css.png",
+			"porcentaje": "75"
+		},
+		{
+			"nombre": "mysql",
+			"imagen": "../../../assets/img/mysql.png",
+			"porcentaje": "80"
+		},
+		{
+			"nombre": "java",
+			"imagen": "../../../assets/img/java.png",
+			"porcentaje": "85"
+		}
+	],
+	"softskills": [
+		{
+			"nombre": "ingles",
+			"imagen": "../../../assets/img/ingles.png",
+			"porcentaje": "85"
+		},
+		{
+			"nombre": "Trabajo Colaborativo",
+			"imagen": "../../../assets/img/TrabajoColaborativo.png",
+			"porcentaje": "100"
+		},
+		{
+			"nombre": "creatividad",
+			"imagen": "../../../assets/img/creatividad.png",
+			"porcentaje": "80"
+		},
+		{
+			"nombre": "comunicacion",
+			"imagen": "../../../assets/img/comunicacion.png",
+			"porcentaje": "90"
+		}
+	],
+	"proyecto": [
+		{
+			"nombre": "ISP 63",
+			"descripcion": "Sistemas Computacionales Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt atque sunt harum ipsa, asperiores pariatur voluptas repudiandae perspiciatis voluptate iusto totam delectus culpa nihil ut vitae officia ab nulla?",
+			"inicio": "2019",
+			"fin": "2023"
+		},
+		{
+			"nombre": "ISP 63",
+			"descripcion": "Sistemas Computacionales Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt atque sunt harum ipsa, asperiores pariatur voluptas repudiandae perspiciatis voluptate iusto totam delectus culpa nihil ut vitae officia ab nulla?",
+			"inicio": "2019",
+			"fin": "2023"
+		},
+		{
+			"nombre": "ISP 63",
+			"descripcion": "Sistemas Computacionales Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt atque sunt harum ipsa, asperiores pariatur voluptas repudiandae perspiciatis voluptate iusto totam delectus culpa nihil ut vitae officia ab nulla?",
+			"inicio": "2019",
+			"fin": "2023"
 		}
 	]
 }

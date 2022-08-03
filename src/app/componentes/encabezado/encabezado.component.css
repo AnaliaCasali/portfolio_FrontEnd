@@ -1,0 +1,23 @@
+
+#encabezado {
+background-color: #a1b5cb;
+padding: .5em;
+overflow: hidden;
+}
+#logoAP {
+    width: 150px;
+}
+
+
+#appSocial{
+  margin-top: 25px;
+}
+
+i{
+    color:white;
+    margin: 0 10px 0 10px;
+    }
+    .banner {
+        width: 100%;
+         
+    }
