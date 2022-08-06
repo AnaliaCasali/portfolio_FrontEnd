@@ -14,6 +14,8 @@ import { LoginComponent } from './componentes/login/login.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +26,16 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     SkillsComponent,
     ProyectosComponent,
     LoginComponent,
-    EducacionComponent
-  ],
+    EducacionComponent,
+    PortfolioComponent,
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgCircleProgressModule.forRoot({}),
     DragDropModule,
+    ReactiveFormsModule,
 
   ],
 
