@@ -1,5 +1,12 @@
 <div id="educacion" class="container-fluid borderless">
-    <h2>Educacion</h2>
+    <div class="row">
+        <div class="col-md-10 " ><h2>Educacion</h2></div>
+    <div class="col-md-2 " >
+        <button type="button" class="btn btn-link white btn-lg"  routerLink="/nuevaeduc" *ngIf="isLogged"><i class="fa-solid fa-file-circle-plus fa-xl white"></i></button>
+    </div>
+    
+    </div>
+    
     <ul class="items-list">
         <li *ngFor="let educacion of educacionList">    
             <div class="card mb-3 borderless" >
@@ -9,14 +16,23 @@
                 </div>
                 <div class="col-md-11">
                     <div class="card-body list-info">
-                        <div class="btn-edit ">
-                            <a href="#"><i class="fa fa-trash"></i></a>
-                            <a href="#"><i class="fa fa-pen"> </i></a> 
-                            <h5 class="card-title"> {{educacion.escuela}}</h5>                         
+                        <div>
+                            <span *ngIf="isLogged">
+                                <!---  --->
+                                <button type="button" class="btn btn-link white btn-lg" (click)="delete(educacion.id)"  >
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                                <button type="button" class="btn btn-link white btn-lg"   routerLink="/nuevaeduc/{{educacion.id}}">
+                                    <i class="fa fa-pen"></i>
+                                </button>
+                            </span>
+
+
+                            <span><h5 class="card-title"> {{educacion.escuela}}</h5></span>                         
                         </div>
                         <p class="card-text">{{educacion.titulo}}. 
                         <time> {{educacion.inicio}}</time> - <time>{{educacion.fin}}</time></p>
-                        <p class="card-text"><small >{{educacion.career}}</small></p>
+                        <p class="card-text"><small >{{educacion.carrera}}</small></p>
                     </div>
                 </div>
                 </div>

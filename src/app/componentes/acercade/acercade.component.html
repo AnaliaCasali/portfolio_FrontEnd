@@ -1,17 +1,24 @@
 
 <div class="container-fluid">
-    <div class="row">
+
+    <div class="row" *ngFor="let datos of perfil" >
          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <img id="fotoperfil" src="../../../assets/img/FotoAna.png" class="img-fluid" alt="Responsive image"/>
-            <p id="nombre">nom</p>
-            <p>cargo</p>
+            <img id="fotoperfil" [src]=datos.image_perfil  class="img-fluid" alt="Responsive image"/>
+            <p id="nombre">{{datos.nombres}}  {{datos.apellido}}</p>
+            <p>{{datos.domicilio}} / {{datos.telefono}} </p>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <div class="col-xs-11 col-sm-7 col-md-7 col-lg-7">
             <span><h2>Acerca de</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laudantium incidunt sunt, exercitationem, non aperiam blanditiis nisi eum dolore nemo similique corporis recusandae assumenda. Repellendus odio atque minima doloribus placeat.
+            <p>{{datos.sobreMi}} /  {{datos.ocupacion}}
             </p>
             </span>
         </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <button type="button" class="btn btn-link white btn-lg" routerLink="/nuevoperfil/{{datos.id}}"  *ngIf="isLogged">
+                <i class="fa fa-pen white"></i>
+            </button>
+        </div>
+    
     </div>
 </div>
 <!--

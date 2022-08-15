@@ -12,10 +12,17 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
-import { HttpClientModule } from '@angular/common/http';
+import {  HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { interceptorProvider } from './servicios/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { NewPerfilComponent } from './componentes/acercade/new-perfil.component';
+//import { ModalModule } from './modal.module'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +35,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     EducacionComponent,
     PortfolioComponent,
+    NewExperienciaComponent,
+    NewEducacionComponent,
+    NewProyectoComponent,
+    NewPerfilComponent,
+    
       ],
   imports: [
     BrowserModule,
@@ -36,12 +48,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgCircleProgressModule.forRoot({}),
     DragDropModule,
     ReactiveFormsModule,
-
+  //  ModalModule,
+    FormsModule, 
+    
   ],
 
 
 
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

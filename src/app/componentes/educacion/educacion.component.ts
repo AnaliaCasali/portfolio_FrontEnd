@@ -1,18 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Educacion } from 'src/app/model/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
+import { TokenService } from 'src/app/servicios/token.service';
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacionList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
-
+  educacionList: Educacion[]=[];
+  constructor(private  datosEducacion:EducacionService, private tokenService:TokenService ) {}
+  isLogged=false;
+   
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.educacionList=data.education;
-    })
+    this.cargarEducacion();
+    if (this.tokenService.getToken())
+      {this.isLogged=true;}
+    else
+      {this.isLogged=false;}
+     }
+
+  cargarEducacion():void{
+    this.datosEducacion.lista().subscribe(data =>{this.educacionList=data;});
+  }
+  delete(id?: number){
+    if(id != undefined){
+      this.datosEducacion.delete(id).subscribe(
+        data => {
+          this.cargarEducacion();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
   }
 
 }

@@ -1,0 +1,91 @@
+
+<app-encabezado></app-encabezado>
+<div  class="container" *ngIf="perf" id="updateForm">
+    <h2>Editando Experiencia Laboral:</h2>
+  <form (ngSubmit)="onUpdate()" novalidate #f="ngForm"  >  
+      <div class="row">
+          <div class="col-md-6">
+          <label for="nombre">Nombres</label>
+            <input type="text" class="form-control" placeholder="Nombres" id="nombres" name="nombres" 
+             [(ngModel)]="perf.nombres" required>
+          </div>
+          <div class="col-md-6">
+          <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" placeholder="Apellido" id="apellido"  name="apellido" 
+            [(ngModel)]="perf.apellido" required>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            <label for="sobreMi">Sobre Mi</label>
+              <input type="text" class="form-control" placeholder="Sobre Mi" id="sobreMi" name="sobreMi" 
+               [(ngModel)]="perf.sobreMi" required>
+            </div>
+            <div class="col-md-6">
+            <label for="ocupacion">Ocupación</label>
+              <input type="text" class="form-control" placeholder="Ocupacion" id="ocupacion"  name="ocupacion" 
+              [(ngModel)]="perf.ocupacion" required>
+            </div>
+        </div>
+        <div class="row">          
+            <div class="col-md-6">
+                <label for="domicilio">Domicilio</label>
+                  <input type="text" class="form-control" placeholder="Domicilio" id="domicilio"  name="domicilio" 
+                  [(ngModel)]="perf.domicilio" required>
+                </div>
+            <div class="col-md-6">
+              <label for="imagen">URL a Imagen Perfil</label>
+            
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://</span>
+                  </div>
+                  <input type="url" class="form-control" id="imagen" name="imagen" aria-describedby="basic-addon3"  [(ngModel)]="perf.image_perfil" required>
+                </div>
+            </div>
+            
+      </div>
+      <div class="form-row row" >
+          <div class="col-md-4">
+            <label for="mail">Email</label>
+              <input type="email" class="form-control" placeholder="Email" id="mail"  name="mail" 
+              [(ngModel)]="perf.mail" required>
+  
+           </div>
+           <div class="col-md-4">
+            <label for="github">Github</label>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">https://</span>
+                </div>
+                <input type="url" class="form-control" id="github" name="github" aria-describedby="basic-addon3"  [(ngModel)]="perf.github" required>
+              </div>
+
+           </div>
+           <div class="col-md-4">
+            <label for="linkedin">Linked In</label>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">https://</span>
+                </div>
+                <input type="url" class="form-control" id="linkedin" name="linkedin" aria-describedby="basic-addon3"  [(ngModel)]="perf.linkedin" required>
+              </div>
+
+           </div>
+
+
+
+           <div class="col-md-2">
+      <!-- Submit button -->
+      <div class="form-group">
+          
+          <label for="guardar"></label>
+          <button type="submit" id="guardar" name="guardar" class="btn btn-primary btn-lg btn-block"><i class="fa-solid fa-floppy-disk"></i>Guardar</button>
+      </div>
+  </div>
+  </div>
+    </form>
+    </div>
+    <app-footer></app-footer>

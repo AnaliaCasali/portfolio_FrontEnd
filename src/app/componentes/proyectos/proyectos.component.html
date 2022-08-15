@@ -1,20 +1,30 @@
 <div id="proyectos" class="container-fluid borderless"> 
-        
-    <h2>Proyectos</h2>
+    <div class="row">
+        <div class="col-md-10 " >    <h2>Proyectos</h2>        </div>
+        <div class="col-md-2 " >
+            <button type="button" class="btn btn-link white btn-lg"  routerLink="/nuevoproy" *ngIf="isLogged"><i class="fa-solid fa-file-circle-plus fa-xl white"></i></button>
+        </div>
+    </div>
+    
     <ul class="items-list">
-        <li *ngFor="let proyecto of proyectosList">    
+        <li *ngFor="let proyecto of proyectos">    
             <div class="card mb-3 borderless" >
                 <div class="row g-0">
                 <div class="col-md-12">
                     <div class="card-body list-info">
-                        <div class="btn-edit ">
-                            <span>
-                                <a href="#"><i class="fa fa-trash"></i></a>
-                                <a href="#"><i class="fa fa-pen"> </i></a> 
+                        <div >
+                            <span *ngIf="isLogged">
+                                <!---  --->
+                                <button type="button" class="btn btn-link white btn-lg" (click)="delete(proyecto.id)"  >
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                                <button type="button" class="btn btn-link white btn-lg"   routerLink="/nuevoproy/{{proyecto.id}}">
+                                    <i class="fa fa-pen"></i>
+                                </button>
                             </span>
-                            <span class="card-title"><h4> {{proyecto.nombre}}</h4> - 
-                            </span>                         
-                        </div>
+                            <span class="card-title"><h4> {{proyecto.nombre}}</h4> </span>                         
+                            </div>
+
                         <p class="card-text"><time>{{proyecto.inicio}}</time> - <time>{{proyecto.fin}}</time></p>
                         <p class="card-text"><small>{{proyecto.descripcion}}</small></p>
                     </div>

@@ -1,21 +1,31 @@
     <div id="experiencia" class="container-fluid borderless"> 
+        <div class="row">
+            <div class="col-md-10 " ><h2>Experiencia</h2></div>
+        <div class="col-md-2 " >
+            <button type="button" class="btn btn-link white btn-lg"  routerLink="/nuevaeduc" *ngIf="isLogged"><i class="fa-solid fa-file-circle-plus fa-xl white"></i></button>
+        </div>
         
-        <h2>Experiencia</h2>
+        </div>
         <ul class="items-list">
-            <li *ngFor="let experiencia of experienciaList">    
+            <li *ngFor="let experiencia of experiencias">    
                 <div class="card mb-3 borderless" >
                     <div class="row g-0">
                     <div class="col-md-1 list-info" >
-                        <img [src]="experiencia.imagen"  class="logo-img img-fluid rounded-start" alt="...">            
+                        <img [src]="experiencia.imagen "  class="logo-img img-fluid rounded-start" alt="...">            
                     </div>
                     <div class="col-md-11">
                         <div class="card-body list-info">
-                            <div class="btn-edit ">
-                                <span>
-                                    <a href="#"><i class="fa fa-trash"></i></a>
-                                    <a href="#"><i class="fa fa-pen"> </i></a> 
+                            <div >
+                                <span *ngIf="isLogged">
+                                    <!---  --->
+                                    <button type="button" class="btn btn-link white btn-lg" (click)="delete(experiencia.id)"  >
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-link white btn-lg"   routerLink="/nuevaexp/{{experiencia.id}}">
+                                        <i class="fa fa-pen"></i>
+                                    </button>
                                 </span>
-                                <span class="card-title"><h4> {{experiencia.empresa}}</h4> - 
+                                <span class="card-title"><h4> {{experiencia.nombre}}</h4> - 
                                 <h6> {{experiencia.puesto}}</h6></span>                         
                             </div>
                             <p class="card-text"><time>{{experiencia.inicio}}</time> - <time>{{experiencia.fin}}</time></p>
@@ -26,6 +36,7 @@
                 </div>
             </li>
         </ul>
+
     </div><!--cierra div experiencia-->
     
  

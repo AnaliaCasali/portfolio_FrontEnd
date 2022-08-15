@@ -6,7 +6,9 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class AutenticacionService {
-  url: "http://npinti.ddns.net:9008/api/auth/login" = "http://npinti.ddns.net:9008/api/auth/login";
+  /*url: "http://npinti.ddns.net:9008/api/auth/login" = "http://npinti.ddns.net:9008/api/auth/login";
+  url: "http://localhost:8080/auth"="http://localhost:8080/auth";
+
   currentUserSubject: BehaviorSubject<any>;
   constructor( private http:HttpClient) {
     console.log("El servicio de autenticacion esta corriendo")
@@ -18,5 +20,5 @@ export class AutenticacionService {
       sessionStorage.setItem('currentUser',JSON.stringify(data));
       return data;
     }))
-   }
+   }*/
 }

@@ -1,0 +1,73 @@
+<app-encabezado></app-encabezado>
+<div  class="container"  *ngIf="isNew"  id="newForm">
+    <h2>Ingresando Nuevo Proyecto Laboral:</h2>
+    <div class="row">
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm"  >  
+    <div class="form-row row">
+        <div class="col-md-6">
+        <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" placeholder="Empresa" id="nombre" name="nombre" 
+          *ngIf="isNew" [(ngModel)]="nombre" required>
+        </div>
+        <div class="col-md-6">
+            <label for="descripcion">Descripción del Proyecto</label>
+            <input type="text" class="form-control" placeholder="Descripcion" id="descripcion"   name="descripcion"  
+            *ngIf="isNew" [(ngModel)]="descripcion" required>
+        </div>
+      </div>
+      <div class="form-row row">
+        <div class="col-md-4">
+            <label for="inicio">Fecha Inicio</label>
+          <input type="date" class="form-control" placeholder="Fecha Inicio" id="inicio"  name="inicio" [(ngModel)]="inicio" required>
+        </div>
+        <div class="col-md-4">
+            <label for="fin">Fecha Fin</label>
+          <input type="date" class="form-control" placeholder="Fecha Fin" id="fin"   name="fin" [(ngModel)]="fin" required>
+        </div>
+        <div class="col-md-4">
+            <button type="submit" id="guardar" class="btn btn-primary btn-lg btn-block"><i class="fa-solid fa-floppy-disk"></i>Guardar</button>
+        </div>
+    </div>
+  </form>
+  </div>
+  </div>
+
+<!--editando--->
+
+<div  class="container" *ngIf="proy" id="updateForm">
+  <h2>Editando Proyectos:</h2>
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm"  >  
+    <div class="row">
+        <div class="col-md-6">
+        <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre" 
+           [(ngModel)]="proy.nombre" required>
+        </div>
+        <div class="col-md-6">
+        <label for="descripcion">descripcion</label>
+          <input type="text" class="form-control" placeholder="Descripcion" id="descripcion"  name="descripcion" 
+          [(ngModel)]="proy.descripcion" required>
+        </div>
+      </div>
+      <div class="form-row row">
+        <div class="col-md-4">
+            <label for="inicio">Fecha Inicio</label>
+          <input type="date" class="form-control" placeholder="Fecha Inicio" id="inicio"  name="inicio" 
+          [(ngModel)]="proy.inicio" required>
+        </div>
+        <div class="col-md-4">
+            <label for="fin">Fecha Fin</label>
+          <input type="date" class="form-control" placeholder="Fecha Fin" id="fin"   name="fin" 
+          [(ngModel)]="proy.fin" required>
+        </div>
+        <div class="col-md-4">
+        <!-- Submit button -->
+            <div class="form-group">   
+                <label for="guardar"></label>
+                <button type="submit" id="guardar" name="guardar" class="btn btn-primary btn-lg btn-block"><i class="fa-solid fa-floppy-disk"></i>Guardar</button>
+            </div>
+        </div>
+    </div>
+  </form>
+  </div>
+  <app-footer></app-footer>
