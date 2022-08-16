@@ -11,7 +11,7 @@ const AUTHORITIES_KEY = 'AuthAuthorities';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  URL = "http://localhost:8080/experiencia/"; 
+  URL = "https://portfolioanalia.herokuapp.com/experiencia/"; 
   constructor(private http: HttpClient) { 
   }
   public lista():Observable<Experiencia[]>{

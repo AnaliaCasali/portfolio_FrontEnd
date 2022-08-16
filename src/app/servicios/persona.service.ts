@@ -11,7 +11,7 @@ const AUTHORITIES_KEY = 'AuthAuthorities';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = "http://localhost:8080/personas/"; 
+  URL = "https://portfolioanalia.herokuapp.com/personas/"; 
   constructor(private http: HttpClient) { 
 
   }

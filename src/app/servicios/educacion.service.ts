@@ -11,7 +11,7 @@ const AUTHORITIES_KEY = 'AuthAuthorities';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = "http://localhost:8080/educacion/"; 
+  URL = "https://portfolioanalia.herokuapp.com/educacion/"; 
   constructor(private http: HttpClient) { 
   }
   public lista():Observable<Educacion[]>{

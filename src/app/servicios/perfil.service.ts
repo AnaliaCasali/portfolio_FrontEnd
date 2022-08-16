@@ -7,7 +7,7 @@ import { Perfil } from '../model/perfil';
   providedIn: 'root'
 })
 export class PerfilService {
-  URL = "http://localhost:8080/perfil/"; 
+  URL = "https://portfolioanalia.herokuapp.com/perfil/"; 
   constructor(private http: HttpClient) { 
   }
   public lista():Observable<Perfil[]>{
